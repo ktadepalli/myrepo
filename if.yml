@@ -1,8 +1,16 @@
 ---
-- name: test raw module
-  hosts: all
+- hosts : windows
+  
   tasks:
-    - name: run ifconfig
-      raw: ifconfig
-      register: ifconfig
-    - debug: var=ifconfig
+       - name: downloading winscp571setup.exe....
+         win_copy:
+               #src: //192.168.176.16/BuildShare/winscp571setup.exe
+               src: \\192.168.176.16\BuildShare\winscp571setup.exe
+               dest: E:\winscp571setup.exe
+               remote_src: True
+
+       - name: Installing.......
+         raw: 'E:\winscp571setup.exe /silent'
+         #raw: 
+            #path: 'E:\winscp571setup.exe /Quiet /NoRestart /Full'
+            #state: present          
