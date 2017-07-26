@@ -1,5 +1,5 @@
 ---
-- hosts : windows
+- hosts: windows
   
   tasks:
        - name: downloading winscp571setup.exe....
