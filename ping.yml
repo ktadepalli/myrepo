@@ -1,0 +1,16 @@
+---
+- name: Linux machines ping test
+  hosts: linux
+  tasks:
+    - name: run ifconfig
+      raw: ifconfig
+      register: ifconfig
+    - debug: var=ifconfig
+    
+- name:  Windows machines ping test
+  hosts: windows
+  tasks:
+    - name: run ipconfig
+      raw: ipconfig
+      register: ipconfig
+    - debug: var=ipconfig
