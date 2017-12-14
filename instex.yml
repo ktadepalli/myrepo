@@ -13,4 +13,4 @@
          raw: 'E:\winscp571setup.exe /silent'
          #raw: 
             #path: 'E:\winscp571setup.exe /Quiet /NoRestart /Full'
-            #state: present       ccccc   kk
+            #state: present       ccccc   kkbjhhh
