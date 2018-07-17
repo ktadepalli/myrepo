@@ -1,8 +1,0 @@
----
-- name: test raw module
-  hosts: all
-  tasks:
-    - name: run ifconfig
-      raw: ifconfig
-      register: ifconfig
-    - debug: var=ifconfig
